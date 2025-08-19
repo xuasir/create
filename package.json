@@ -1,0 +1,49 @@
+{
+  "name": "@xus/create",
+  "version": "0.1.0",
+  "description": "create a project and templates",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "xcreate": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsdown build --watch",
+    "build": "tsdown build",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write .",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "typescript",
+    "library",
+    "tsdown",
+    "esm",
+    "cjs"
+  ],
+  "devDependencies": {
+    "@types/node": "24.2.0",
+    "@typescript-eslint/eslint-plugin": "8.40.0",
+    "@typescript-eslint/parser": "8.40.0",
+    "eslint": "9.33.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-import": "2.32.0",
+    "prettier": "3.6.2",
+    "tsdown": "0.14.1",
+    "typescript": "5.9.2",
+    "vitest": "3.2.4"
+  },
+  "dependencies": {
+    "cac": "6.7.14",
+    "giget": "^2.0.0",
+    "js-yaml": "4.1.0"
+  }
+}
