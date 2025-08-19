@@ -1,12 +1,18 @@
 {
-  "name": "@xus/create",
+  "name": "@a-sir/create",
   "version": "0.1.0",
-  "description": "create a project and templates",
+  "packageManager": "pnpm@10.14.0",
+  "description": "create a project from templates",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./cli": "./dist/cli.js",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "xcreate": "dist/cli.js"
   },
@@ -21,6 +27,7 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
+  "author": "xuasir",
   "keywords": [
     "typescript",
     "library",
@@ -28,6 +35,10 @@
     "esm",
     "cjs"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "devDependencies": {
     "@types/js-yaml": "4.0.9",
     "@types/node": "24.2.0",
@@ -44,14 +55,10 @@
   },
   "dependencies": {
     "@clack/prompts": "0.11.0",
+    "ansis": "^4.1.0",
     "cac": "6.7.14",
     "consola": "^3.4.2",
     "giget": "2.0.0",
     "js-yaml": "4.1.0"
-  },
-  "exports": {
-    ".": "./dist/index.js",
-    "./cli": "./dist/cli.js",
-    "./package.json": "./package.json"
   }
 }

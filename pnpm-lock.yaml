@@ -11,6 +11,9 @@ importers:
       '@clack/prompts':
         specifier: 0.11.0
         version: 0.11.0
+      ansis:
+        specifier: ^4.1.0
+        version: 4.1.0
       cac:
         specifier: 6.7.14
         version: 6.7.14

@@ -6,6 +6,7 @@ import { downloadTemplate } from 'giget'
 import { Config } from './types'
 import { intro, isCancel, select } from '@clack/prompts'
 import consola from 'consola'
+import ansis from 'ansis'
 
 export interface CreateProjectFromTemplateOptions {
   template: string
@@ -13,7 +14,7 @@ export interface CreateProjectFromTemplateOptions {
 }
 
 export async function fromTemplate(options: CreateProjectFromTemplateOptions) {
-  intro('  Welcome to use @xus/create  ')
+  intro(ansis.bgGreenBright('  Welcome to use @a-sir/create  '))
   let { template, projectPath } = options
   if (!template) {
     throw new Error('template is required')
@@ -60,8 +61,8 @@ const chooseTemplates = async (config: Config) => {
     message: 'Pick a template',
     options: templates.map((item) => ({
       value: item.name,
-      label: item.name,
-      hint: item.color,
+      label: ansis.hex(item.color)(item.name),
+      hint: item?.hint || '',
     })),
   })
   if(isCancel(templateName)) {

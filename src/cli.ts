@@ -4,7 +4,7 @@ import { version } from '../package.json'
 import { createProject, fromTemplate } from './index'
 import consola from 'consola'
 
-const cli = cac('@xus/create')
+const cli = cac('@a-sir/create')
 
 // cli
 //   .command('[projectPath]', 'create a project')

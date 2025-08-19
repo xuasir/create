@@ -5,6 +5,8 @@ export interface ConfigTemplate {
 
   url: string
 
+  hint?: string
+
   // prompts: Prompt[]
 }
 
