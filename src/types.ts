@@ -4,6 +4,8 @@ export interface ConfigTemplate {
   color: string
 
   url: string
+
+  // prompts: Prompt[]
 }
 
 export interface Config {

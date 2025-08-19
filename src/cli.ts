@@ -2,6 +2,7 @@
 import cac from 'cac'
 import { version } from '../package.json'
 import { createProject, fromTemplate } from './index'
+import consola from 'consola'
 
 const cli = cac('@xus/create')
 
@@ -14,9 +15,9 @@ const cli = cac('@xus/create')
 //     createProject({ projectPath }).catch((error) => error && console.error(error))
 //   })
 cli
-  .command('from <template>', 'create a project from a template')
-  .action((template) => {
-    fromTemplate(template).catch((error) => console.error(error))
+  .command('from <template> [projectPath]', 'create a project from a template')
+  .action((template, projectPath) => {
+    fromTemplate({ template, projectPath }).catch((error) => consola.error(error))
   })
 
 cli.help().version(version).parse()

@@ -1,11 +1,12 @@
-- name: node-lib-ts
-  color: '#42b983'
-  url: xuasir/node-lib-starter
+- templates:
+  - name: node-lib-ts
+    color: '#42b983'
+    url: xuasir/node-lib-starter
 
-- name: web-lib-ts
-  color: '#247ba0'
-  url: xuasir/web-lib-starter
+  - name: web-lib-ts
+    color: '#247ba0'
+    url: xuasir/web-lib-starter
 
-- name: vite-vue3-ts
-  color: '#70c1b3'
-  url: xuasir/vite-vue3-starter
+  - name: vite-vue3-ts
+    color: '#70c1b3'
+    url: xuasir/vite-vue3-starter
